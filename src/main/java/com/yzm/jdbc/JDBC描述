@@ -35,3 +35,5 @@ ResultSet executeQuery()：获取执行SQL语句的结果集
 int executeUpdate()：执行更新操作，返回成功数
 setXXX(int parameterIndex, X x)
 void addBatch()：添加多条命令
+
+###
