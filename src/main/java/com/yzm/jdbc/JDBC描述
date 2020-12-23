@@ -1,0 +1,37 @@
+### 依赖
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+</dependency>
+
+### 工具类：JDBCUtils
+创建连接、关闭连接
+
+### 基本步骤
+1.加载驱动、创建连接
+2.创建Statement或PreparedStatement对象
+3.执行SQL语句
+4.获取结果集ResultSet
+5.关闭连接、释放资源
+
+### Connection 常用方法
+Statement createStatement()： 获取Statement对象
+PreparedStatement prepareStatement(String sql)： 获取PreparedStatement对象
+CallableStatement prepareCall(String sql)：获取CallableStatement对象
+void setAutoCommit(boolean autoCommit)： 设置自动提交模式
+void commit()： 提交
+void rollback()： 回滚
+void close()： 关闭连接
+void setReadOnly(boolean readOnly)：设置只读
+
+### Statement 常用方法
+ResultSet executeQuery(String sql)：执行SQL语句返回结果集
+int executeUpdate(String sql)：执行SQL返回更新行数
+void addBatch(String sql)：添加SQL语句到Statement对象的命令列表
+int[] executeBatch()：执行Statement对象的命令列表中多个SQL语句
+
+### PreparedStatement 常用方法
+ResultSet executeQuery()：获取执行SQL语句的结果集
+int executeUpdate()：执行更新操作，返回成功数
+setXXX(int parameterIndex, X x)
+void addBatch()：添加多条命令
